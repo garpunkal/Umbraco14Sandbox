@@ -1,10 +1,10 @@
-const n = [
+const s = [
   {
     type: "dashboard",
     name: "Punk.Dashboard",
     alias: "punk.dashboard",
     elementName: "punk-dashboard",
-    js: () => import("./dashboard.element-BY7oNU5Z.js"),
+    js: () => import("./dashboard.element-BNBeg4IJ.js"),
     weight: -10,
     meta: {
       label: "Punk Dashboard",
@@ -17,12 +17,27 @@ const n = [
       }
     ]
   }
-], s = [...n], t = [
-  ...s
-], e = (o, a) => {
-  a.registerMany(t);
+], t = [...s], o = [
+  {
+    type: "propertyEditorUi",
+    name: "Punk.Suggestions",
+    alias: "punk.suggestions",
+    elementName: "punk-suggestions",
+    js: () => import("./suggestions.element-DzKXpY2R.js"),
+    meta: {
+      label: "Suggestions",
+      icon: "icon-list",
+      group: "common",
+      propertyEditorSchemaAlias: "Umbraco.Plain.String"
+    }
+  }
+], a = [...o], e = [
+  ...t,
+  ...a
+], r = (i, n) => {
+  n.registerMany(e);
 };
 export {
-  e as onInit
+  r as onInit
 };
 //# sourceMappingURL=assets.js.map

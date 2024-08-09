@@ -42,8 +42,7 @@ export class PunkDashboard extends UmbElementMixin(LitElement) {
     render() {
         return html`
           <uui-box headline="hello world">
-
-
+            
                 <h1>Welcome ${this._currentUser?.name ?? "Unknown"}!</h1>
          
                 <uui-button href="https://garpunkal.dev" look="primary" type="button" target="_blank">garpunkal.dev</uui-button>

@@ -41,8 +41,7 @@ let o = class extends y(_) {
     var e;
     return h`
           <uui-box headline="hello world">
-
-
+            
                 <h1>Welcome ${((e = this._currentUser) == null ? void 0 : e.name) ?? "Unknown"}!</h1>
          
                 <uui-button href="https://garpunkal.dev" look="primary" type="button" target="_blank">garpunkal.dev</uui-button>
@@ -105,4 +104,4 @@ export {
   o as PunkDashboard,
   A as default
 };
-//# sourceMappingURL=dashboard.element-BY7oNU5Z.js.map
+//# sourceMappingURL=dashboard.element-BNBeg4IJ.js.map
