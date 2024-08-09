@@ -1,0 +1,14 @@
+{
+    "$schema": "../../../Umbraco14Sandbox.Web/umbraco-package-schema.json",
+    "name": "Punk.Package",
+    "id": "punk.package",
+    "version": "0.1.0",
+    "extensions": [
+      {
+        "type": "entryPoint",
+        "alias": "punkPackage.EntryPoint",
+        "name": "punkpackage.entrypoint",
+          "js": "/app_plugins/Umbraco14Sandbox/assets.js"
+      }
+    ]
+  }

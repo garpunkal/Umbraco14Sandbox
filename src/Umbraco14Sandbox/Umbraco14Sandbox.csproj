@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\Umbraco14Sandbox.Core\Umbraco14Sandbox.Core.csproj" />
+    <ProjectReference Include="..\Umbraco14Sandbox.Client\Umbraco14Sandbox.Client.csproj" />
+    <ProjectReference Include="..\Umbraco14Sandbox.Web\Umbraco14Sandbox.Web.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+</Project>
