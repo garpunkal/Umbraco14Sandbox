@@ -11,7 +11,6 @@ export default class PunkSuggestionsPropertyEditorUIElement extends UmbElementMi
     _modalManagerContext?: typeof UMB_MODAL_MANAGER_CONTEXT.TYPE;
     _notificationContext?: typeof UMB_NOTIFICATION_CONTEXT.TYPE;
 
-
     constructor() {
         super();
         this.consumeContext(UMB_MODAL_MANAGER_CONTEXT, (instance) => {
