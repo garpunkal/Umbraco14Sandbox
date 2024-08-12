@@ -8,7 +8,7 @@ const sectionManifest : ManifestSection = {
     meta: {
         label: 'Punk',
         pathname: 'Punk'
-    }
+    }   
 }
 
 export const manifests = [sectionManifest];

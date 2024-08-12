@@ -1,18 +1,11 @@
 import { UMB_BLOCK_CATALOGUE_MODAL } from "@umbraco-cms/backoffice/block";
 import { UmbElementMixin } from "@umbraco-cms/backoffice/element-api";
 import { LitElement, css, customElement, html, state } from "@umbraco-cms/backoffice/external/lit";
-import { 
+import { //https://apidocs.umbraco.com/v14/ui-api/modules/packages_core_modal.html
     UMB_CODE_EDITOR_MODAL, 
     UMB_CONFIRM_MODAL,
-    // UMB_DATA_TYPE_PICKER_MODAL,
-    // UMB_DICTIONARY_ITEM_PICKER_MODAL,
-    // UMB_DOCUMENT_TYPE_PICKER_MODAL,
     UMB_ICON_PICKER_MODAL,
-    UMB_ITEM_PICKER_MODAL,
     UMB_MODAL_MANAGER_CONTEXT, 
-    // UMB_PARTIAL_VIEW_PICKER_MODAL,
-    // UMB_TEMPLATE_PICKER_MODAL,
-    UMB_WORKSPACE_MODAL,
     UmbModalManagerContext,
     UmbModalToken } from "@umbraco-cms/backoffice/modal";
 import { extractUmbColorVariable } from "@umbraco-cms/backoffice/resources";
@@ -73,15 +66,15 @@ export class PunkDialogExamplesElement extends UmbElementMixin(LitElement) {
     modal_names = [
         {name: 'Icon Picker', value: UMB_ICON_PICKER_MODAL},
         // {name: 'Data Type Picker', value: UMB_DATA_TYPE_PICKER_MODAL },
-        {name: 'Block cataloug', value: UMB_BLOCK_CATALOGUE_MODAL }, 
-        {name: 'Workspace', value: UMB_WORKSPACE_MODAL},
+        {name: 'Block catalog', value: UMB_BLOCK_CATALOGUE_MODAL }, 
+        // {name: 'Workspace', value: UMB_WORKSPACE_MODAL},
         // {name: 'Document Type picker', value: UMB_DOCUMENT_TYPE_PICKER_MODAL},
-        {name: 'Code editor', value: UMB_CODE_EDITOR_MODAL},
+        {name: 'Code editor', value: UMB_CODE_EDITOR_MODAL}
         // {name: 'template picker', value: UMB_TEMPLATE_PICKER_MODAL},
         // {name: 'dictionary item picker', value: UMB_DICTIONARY_ITEM_PICKER_MODAL },
         // {name: 'Partial view picker', value: UMB_PARTIAL_VIEW_PICKER_MODAL},
-        {name: 'Media tree picker', value: UMB_ITEM_PICKER_MODAL}];
-
+        // {name: 'Media tree picker', value: UMB_ITEM_PICKER_MODAL}
+    ];
 
     render() {
         return html`
