@@ -54,5 +54,4 @@ npm run watch
 ### Blog Articles
 - https://dev.to/kevinjump/early-adoptors-guide-to-umbraco-v14-package-structure-3i67
 - https://github.com/KevinJump/EarlyAdopters.Umbraco.Templates/tree/main/package-template/MyPackage.1.Client/assets
-- https://github.com/KevinJump/EarlyAdopters.Umbraco.Templates/tree/main/package-template/MyPackage.1.Client/assets
-
+- https://github.com/KevinJump/TimeDashboard

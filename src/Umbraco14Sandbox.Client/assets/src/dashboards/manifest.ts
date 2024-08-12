@@ -15,10 +15,10 @@ const dashboards: Array<ManifestDashboard> = [
         conditions: [
             {
                 alias: 'Umb.Condition.SectionAlias',
-                match: 'Umb.Section.Content'
+                match: 'punk.section'
             }
         ]
     }
 ]
 
-export const manifests = [...dashboards];
+export const manifests = [...dashboards];   

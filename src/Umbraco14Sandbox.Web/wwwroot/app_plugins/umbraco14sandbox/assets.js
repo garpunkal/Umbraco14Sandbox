@@ -1,4 +1,4 @@
-const t = [
+const n = [
   {
     type: "dashboard",
     name: "Punk.Dashboard",
@@ -13,11 +13,11 @@ const t = [
     conditions: [
       {
         alias: "Umb.Condition.SectionAlias",
-        match: "Umb.Section.Content"
+        match: "punk.section"
       }
     ]
   }
-], a = [...t], i = [
+], i = [...n], s = [
   {
     type: "propertyEditorUi",
     name: "Punk.Suggestions",
@@ -73,13 +73,185 @@ const t = [
       }
     }
   }
-], s = [...i], o = [
-  ...a,
-  ...s
-], n = (r, e) => {
-  e.registerMany(o);
+], o = [...s], p = {
+  type: "section",
+  alias: "punk.section",
+  name: "Punk section",
+  weight: 10,
+  meta: {
+    label: "Punk",
+    pathname: "Punk"
+  }
+}, l = [p], m = {
+  type: "sectionSidebarApp",
+  kind: "menuWithEntityActions",
+  alias: "punk.sidebar.app",
+  name: "punk app",
+  meta: {
+    label: "Punk",
+    menu: "punk.nested.menu"
+  },
+  conditions: [
+    {
+      alias: "Umb.Condition.SectionAlias",
+      match: "punk.section"
+    }
+  ]
+}, c = {
+  type: "menu",
+  alias: "punk.menu",
+  name: "punk sidebar menu",
+  meta: {
+    label: "punk"
+  }
+}, r = {
+  type: "menuItem",
+  alias: "punk.menu.item",
+  name: "punk menu item",
+  meta: {
+    label: "Punk items",
+    icon: "icon-alarm-clock",
+    entityType: "punk-workspace",
+    menus: [
+      "punk.menu"
+    ]
+  },
+  element: () => import("./nested-menu.element-rbQGmHuG.js")
+}, a = {
+  type: "menu",
+  alias: "punk.nested.menu",
+  name: "Nested menu",
+  element: () => import("./nested-menu.element-rbQGmHuG.js"),
+  meta: {
+    label: "Punk items",
+    icon: "icon-alarm-clock",
+    entityType: "punk-workspace"
+  }
+}, u = [
+  {
+    type: "punk-menu-item",
+    alias: "punk.nested.menu.child-one",
+    name: "child item",
+    weight: 200,
+    meta: {
+      menus: [a.alias],
+      icon: "icon-alarm-clock",
+      label: "child item 1",
+      entityType: "punk-workspace"
+    }
+  },
+  {
+    type: "punk-menu-item",
+    alias: "punk.nested.menu.child-two",
+    name: "child item two",
+    weight: 200,
+    meta: {
+      menus: [a.alias],
+      icon: "icon-alarm-clock",
+      label: "child item 2",
+      entityType: "punk-workspace"
+    }
+  }
+], d = [
+  m,
+  c,
+  r,
+  a,
+  ...u
+];
+var e = {
+  type: "workspace",
+  alias: "punk.workspace",
+  name: "punk workspace",
+  js: () => import("./workspace.element-DdTnOOcJ.js"),
+  meta: {
+    entityType: "punk-workspace"
+  }
+}, k = [
+  {
+    type: "workspaceView",
+    alias: "punk.workspace.default",
+    name: "default view",
+    js: () => import("./defaultWorkspace.element-C2WwZgkT.js"),
+    weight: 300,
+    meta: {
+      icon: "icon-alarm-clock",
+      pathname: "overview",
+      label: "punk"
+    },
+    conditions: [
+      {
+        alias: "Umb.Condition.WorkspaceAlias",
+        match: e.alias
+      }
+    ]
+  },
+  {
+    type: "workspaceView",
+    alias: "punk.workspace.settings",
+    name: "setting view",
+    js: () => import("./settingsWorkspace.element-CJF16pYC.js"),
+    weight: 200,
+    meta: {
+      icon: "icon-settings",
+      pathname: "settings",
+      label: "settings"
+    },
+    conditions: [
+      {
+        alias: "Umb.Condition.WorkspaceAlias",
+        match: e.alias
+      }
+    ]
+  },
+  {
+    type: "workspaceView",
+    alias: "punk.workspace.dialogs",
+    name: "dialogs",
+    js: () => import("./dialogsWorkspace.element-cwSMeUUC.js"),
+    weight: 50,
+    meta: {
+      icon: "icon-app",
+      pathname: "dialogs",
+      label: "Dialogs"
+    },
+    conditions: [
+      {
+        alias: "Umb.Condition.WorkspaceAlias",
+        match: e.alias
+      }
+    ]
+  }
+];
+const g = {
+  type: "workspaceContext",
+  alias: "punk.workspace.context",
+  name: "punk workspace context",
+  js: () => import("./context-BEXJO_N1.js")
+}, h = [], b = [], w = [
+  g,
+  e,
+  ...k,
+  ...h,
+  ...b
+], y = [
+  {
+    type: "modal",
+    alias: "punk.custom.modal",
+    name: "punk custom modal",
+    js: () => import("./custom-modal-element-DEV_xMHD.js")
+  }
+], U = [...y], f = [
+  ...i,
+  ...o,
+  ...l,
+  ...d,
+  ...w,
+  ...U
+], P = (A, t) => {
+  t.registerMany(f);
 };
 export {
-  n as onInit
+  P as onInit
 };
 //# sourceMappingURL=assets.js.map
